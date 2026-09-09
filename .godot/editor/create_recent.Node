@@ -1,0 +1,11 @@
+CanvasLayer
+Popup
+TextureRect
+TextureButton
+VBoxContainer
+ScrollContainer
+Node2D
+Label
+Timer
+AnimationPlayer
+AnimatedSprite2D
