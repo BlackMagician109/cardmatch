@@ -1,7 +1,9 @@
-CanvasLayer
+PlayGamesSnapshotsClient
+PlayGamesSignInClient
 Popup
-TextureRect
 TextureButton
+CanvasLayer
+TextureRect
 VBoxContainer
 ScrollContainer
 Node2D

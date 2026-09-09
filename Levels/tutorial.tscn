@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://bthfiyalutdgq"]
+
+[ext_resource type="Texture2D" uid="uid://c3na6vat5pei1" path="res://Assets/Backgrounds/CloudsNight.png" id="1_ui0rg"]
+[ext_resource type="Script" uid="uid://cq8uw5t6u4nk8" path="res://Scripts/Levels/tutorial.gd" id="1_vgy36"]
+[ext_resource type="PackedScene" uid="uid://bvvewa0u6xwfg" path="res://Scene/card.tscn" id="2_ekh2w"]
+[ext_resource type="Texture2D" uid="uid://brol0tbjmmumi" path="res://Assets/GUI/Pause_BTN.png" id="3_35r3c"]
+[ext_resource type="PackedScene" uid="uid://co3vcql8neymg" path="res://Menus/menu_pause.tscn" id="5_8jc43"]
+[ext_resource type="PackedScene" uid="uid://bymy1jx0pilmo" path="res://Menus/menu_win.tscn" id="6_ain5r"]
+[ext_resource type="PackedScene" uid="uid://do2ydhjw5vcl5" path="res://Menus/menu_lose.tscn" id="7_r3xh1"]
+
+[node name="Tutorial" type="Node2D"]
+script = ExtResource("1_vgy36")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 540.0
+offset_bottom = 959.0
+texture = ExtResource("1_ui0rg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Gui" type="CanvasLayer" parent="."]
+
+[node name="Pause" type="TextureButton" parent="Gui"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 88.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_35r3c")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="Card" parent="Cards" instance=ExtResource("2_ekh2w")]
+offset_left = 88.0
+offset_top = 480.0
+offset_right = 208.0
+offset_bottom = 640.0
+
+[node name="Card2" parent="Cards" instance=ExtResource("2_ekh2w")]
+offset_left = 328.0
+offset_top = 480.0
+offset_right = 448.0
+offset_bottom = 640.0
+
+[node name="Popups" type="CanvasLayer" parent="."]
+
+[node name="menuPause" parent="Popups" instance=ExtResource("5_8jc43")]
+visible = false
+
+[node name="MenuWin" parent="Popups" instance=ExtResource("6_ain5r")]
+visible = false
+
+[node name="MenuLose" parent="Popups" instance=ExtResource("7_r3xh1")]
+visible = false
+
+[connection signal="pressed" from="Gui/Pause" to="." method="_on_pause_pressed"]

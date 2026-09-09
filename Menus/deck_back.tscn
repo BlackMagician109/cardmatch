@@ -1,0 +1,488 @@
+[gd_scene load_steps=4 format=3 uid="uid://b66h16ifa3owm"]
+
+[ext_resource type="Script" uid="uid://6bld4ypq78it" path="res://Scripts/Menus/deck_back.gd" id="1_dbtw6"]
+[ext_resource type="Texture2D" uid="uid://ct7qbm6ftd7aa" path="res://Assets/GUI/Table_01.png" id="2_uyueg"]
+[ext_resource type="Texture2D" uid="uid://dddksayvo60ij" path="res://Assets/GUI/Table_03.png" id="3_ounsb"]
+
+[node name="DeckBack" type="Popup"]
+transparent_bg = true
+size = Vector2i(540, 960)
+visible = true
+script = ExtResource("1_dbtw6")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 64.0
+offset_right = -52.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_uyueg")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = 88.0
+offset_right = -76.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+scroll_deadzone = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="ArtDeco" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ArtCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/ArtDeco"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Botany" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BotanyCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Botany"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cozy" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CozyCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Cozy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cyberpunk" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CyberpunkCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Cyberpunk"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Haunted" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HauntedCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Haunted"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Notebook" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="NotebookCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Notebook"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Floral" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FloralCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Floral"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Geometric1" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GeometricCard1" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Geometric1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Geometric2" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GeometricCard2" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Geometric2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Geometric3" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GeometricCard3" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Geometric3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Geometric4" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GeometricCard4" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Geometric4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tech" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TechCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Tech"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Chequered" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ChequeredCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Chequered"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Circles" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CirclesCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Circles"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="FloralColor" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="FloralColorCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/FloralColor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GM" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GMCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/GM"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="GMColor" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="GMColorCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/GMColor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Snowflake" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SnowflakeCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Snowflake"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Suits" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="SuitsCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Suits"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TechColor" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TechColorCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/TechColor"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Tiger" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("3_ounsb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="TigerCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Tiger"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/ArtDeco" to="." method="_on_art_deco_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Botany" to="." method="_on_botany_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Cozy" to="." method="_on_cozy_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Cyberpunk" to="." method="_on_cyberpunk_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Haunted" to="." method="_on_haunted_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Notebook" to="." method="_on_notebook_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Floral" to="." method="_on_floral_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Geometric1" to="." method="_on_geometric_1_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Geometric2" to="." method="_on_geometric_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Geometric3" to="." method="_on_geometric_3_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Geometric4" to="." method="_on_geometric_4_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Tech" to="." method="_on_tech_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Chequered" to="." method="_on_chequered_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Circles" to="." method="_on_circles_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/FloralColor" to="." method="_on_floral_color_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/GM" to="." method="_on_gm_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/GMColor" to="." method="_on_gm_color_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Snowflake" to="." method="_on_snowflake_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Suits" to="." method="_on_suits_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/TechColor" to="." method="_on_tech_color_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Tiger" to="." method="_on_tiger_pressed"]

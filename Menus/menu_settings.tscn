@@ -1,0 +1,197 @@
+[gd_scene load_steps=13 format=3 uid="uid://btn0y3kqqxy33"]
+
+[ext_resource type="Script" uid="uid://d10i111xfwmg3" path="res://Scripts/Menus/menu_settings.gd" id="1_htboo"]
+[ext_resource type="Texture2D" uid="uid://bdcj842sd0dqo" path="res://Assets/GUI/Window.png" id="1_ip05y"]
+[ext_resource type="Texture2D" uid="uid://ltufnx67dcu7" path="res://Assets/GUI/Sound_BTN.png" id="2_xuvsx"]
+[ext_resource type="Texture2D" uid="uid://i5lkh138jyk" path="res://Assets/GUI/Active Buttons/Sound_BTN.png" id="3_xegn1"]
+[ext_resource type="Texture2D" uid="uid://dulxyo78yeq0c" path="res://Assets/GUI/Music_BTN.png" id="4_u6clm"]
+[ext_resource type="Texture2D" uid="uid://dunhqwukqy3b8" path="res://Assets/GUI/Active Buttons/Music_BTN.png" id="5_krdwk"]
+[ext_resource type="Texture2D" uid="uid://cy7fj1h21f30d" path="res://Assets/GUI/Vibration_BTN.png" id="6_am55a"]
+[ext_resource type="Texture2D" uid="uid://ne87rvi48fmj" path="res://Assets/GUI/Active Buttons/Vibration_BTN.png" id="7_qyvnf"]
+[ext_resource type="Texture2D" uid="uid://tp8p327gixnp" path="res://Assets/GUI/Notifications_BTN.png" id="8_pa8vs"]
+[ext_resource type="Texture2D" uid="uid://ccn2lspy3l6si" path="res://Assets/GUI/Active Buttons/Notifications_BTN.png" id="9_hgvwu"]
+[ext_resource type="Texture2D" uid="uid://7cc07j5oqfsk" path="res://Assets/GUI/Close_BTN.png" id="10_rxpij"]
+[ext_resource type="Texture2D" uid="uid://doruptllhp13w" path="res://Assets/GUI/Active Buttons/Close_BTN.png" id="11_qrjfn"]
+
+[node name="MenuSettings" type="Popup"]
+transparent_bg = true
+size = Vector2i(540, 960)
+visible = true
+script = ExtResource("1_htboo")
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="Window" type="TextureRect" parent="Background"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -399.0
+offset_right = 268.0
+offset_bottom = 399.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ip05y")
+expand_mode = 1
+
+[node name="Heading" type="Label" parent="Background/Window"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -236.0
+offset_top = 12.0
+offset_right = 242.0
+offset_bottom = 71.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Settings"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="CanvasLayer" parent="."]
+
+[node name="Sound" type="TextureButton" parent="Buttons"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -280.0
+offset_right = 144.0
+offset_bottom = -200.0
+grow_vertical = 2
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("2_xuvsx")
+texture_pressed = ExtResource("3_xegn1")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Buttons/Sound"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = -24.5
+offset_right = 168.0
+offset_bottom = 24.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Sound"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Music" type="TextureButton" parent="Buttons"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -144.0
+offset_right = 144.0
+offset_bottom = -64.0
+grow_vertical = 2
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("4_u6clm")
+texture_pressed = ExtResource("5_krdwk")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Buttons/Music"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = -24.5
+offset_right = 168.0
+offset_bottom = 24.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Music"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Vibration" type="TextureButton" parent="Buttons"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = -8.0
+offset_right = 144.0
+offset_bottom = 72.0
+grow_vertical = 2
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("6_am55a")
+texture_pressed = ExtResource("7_qyvnf")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Buttons/Vibration"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = -24.5
+offset_right = 168.0
+offset_bottom = 24.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Vibration"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Notification" type="TextureButton" parent="Buttons"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = 128.0
+offset_right = 144.0
+offset_bottom = 208.0
+grow_vertical = 2
+toggle_mode = true
+button_pressed = true
+texture_normal = ExtResource("8_pa8vs")
+texture_pressed = ExtResource("9_hgvwu")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Label" type="Label" parent="Buttons/Notification"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 128.0
+offset_top = -24.5
+offset_right = 168.0
+offset_bottom = 24.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 40
+text = "Messages"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Exit" type="TextureButton" parent="Buttons"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -39.0
+offset_top = -192.0
+offset_right = 39.0
+offset_bottom = -112.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("10_rxpij")
+texture_pressed = ExtResource("11_qrjfn")
+ignore_texture_size = true
+stretch_mode = 4
+
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]

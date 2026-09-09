@@ -1,0 +1,50 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="CardMatch"
+config/tags=PackedStringArray("card")
+run/main_scene="res://Menus/menu_main.tscn"
+config/features=PackedStringArray("4.4", "Forward Plus")
+config/icon="res://Assets/GameIcon.png"
+
+[autoload]
+
+CardLocations="*res://Scripts/card_locations.gd"
+BackgroundLocations="*res://Scripts/background_locations.gd"
+GameManager="*res://Scripts/game_manager.gd"
+GameSave="*res://Scripts/game_save.gd"
+GodotPlayGameServices="*res://addons/GodotPlayGameServices/scripts/autoloads/godot_play_game_services.gd"
+BannerAds="*res://Scripts/ADS/BannerAds.gd"
+
+[display]
+
+window/size/viewport_width=540
+window/size/viewport_height=960
+window/size/borderless=true
+window/stretch/mode="viewport"
+window/handheld/orientation=1
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/GodotPlayGameServices/plugin.cfg", "res://addons/admob/plugin.cfg")
+
+[gui]
+
+theme/custom_font="res://Assets/GUI/ethnocentric rg.otf"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[rendering]
+
+textures/vram_compression/import_etc2_astc=true

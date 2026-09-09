@@ -1,0 +1,145 @@
+[gd_scene load_steps=8 format=3 uid="uid://cnpqvljjbdx8n"]
+
+[ext_resource type="Script" uid="uid://c3t1hfn2573xe" path="res://Scripts/Levels/level_22.gd" id="1_25eha"]
+[ext_resource type="Texture2D" uid="uid://c3na6vat5pei1" path="res://Assets/Backgrounds/CloudsNight.png" id="2_0tg2d"]
+[ext_resource type="Texture2D" uid="uid://brol0tbjmmumi" path="res://Assets/GUI/Pause_BTN.png" id="3_ossva"]
+[ext_resource type="PackedScene" uid="uid://bvvewa0u6xwfg" path="res://Scene/card.tscn" id="4_60xuq"]
+[ext_resource type="PackedScene" uid="uid://do2ydhjw5vcl5" path="res://Menus/menu_lose.tscn" id="5_p8qfb"]
+[ext_resource type="PackedScene" uid="uid://co3vcql8neymg" path="res://Menus/menu_pause.tscn" id="6_qwt1k"]
+[ext_resource type="PackedScene" uid="uid://bymy1jx0pilmo" path="res://Menus/menu_win.tscn" id="7_faaan"]
+
+[node name="Level22" type="Node2D"]
+script = ExtResource("1_25eha")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 540.0
+offset_bottom = 959.0
+texture = ExtResource("2_0tg2d")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Gui" type="CanvasLayer" parent="."]
+
+[node name="Pause" type="TextureButton" parent="Gui"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 88.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_ossva")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="Card" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 20.0
+offset_top = 304.0
+offset_right = 140.0
+offset_bottom = 464.0
+
+[node name="Card2" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 404.0
+offset_top = 304.0
+offset_right = 524.0
+offset_bottom = 464.0
+
+[node name="Card3" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 20.0
+offset_top = 496.0
+offset_right = 140.0
+offset_bottom = 656.0
+
+[node name="Card4" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 404.0
+offset_top = 496.0
+offset_right = 524.0
+offset_bottom = 656.0
+
+[node name="Card5" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 276.0
+offset_top = 496.0
+offset_right = 396.0
+offset_bottom = 656.0
+
+[node name="Card6" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 276.0
+offset_top = 304.0
+offset_right = 396.0
+offset_bottom = 464.0
+
+[node name="Card7" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 404.0
+offset_top = 688.0
+offset_right = 524.0
+offset_bottom = 848.0
+
+[node name="Card8" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 148.0
+offset_top = 688.0
+offset_right = 268.0
+offset_bottom = 848.0
+
+[node name="Card9" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 404.0
+offset_top = 112.0
+offset_right = 524.0
+offset_bottom = 272.0
+
+[node name="Card10" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 276.0
+offset_top = 112.0
+offset_right = 396.0
+offset_bottom = 272.0
+
+[node name="Card11" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 20.0
+offset_top = 688.0
+offset_right = 140.0
+offset_bottom = 848.0
+
+[node name="Card12" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 20.0
+offset_top = 112.0
+offset_right = 140.0
+offset_bottom = 272.0
+
+[node name="Card13" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 148.0
+offset_top = 304.0
+offset_right = 268.0
+offset_bottom = 464.0
+
+[node name="Card14" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 148.0
+offset_top = 112.0
+offset_right = 268.0
+offset_bottom = 272.0
+
+[node name="Card15" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 148.0
+offset_top = 496.0
+offset_right = 268.0
+offset_bottom = 656.0
+
+[node name="Card16" parent="Cards" instance=ExtResource("4_60xuq")]
+offset_left = 276.0
+offset_top = 688.0
+offset_right = 396.0
+offset_bottom = 848.0
+
+[node name="Popups" type="CanvasLayer" parent="."]
+
+[node name="MenuLose" parent="Popups" instance=ExtResource("5_p8qfb")]
+visible = false
+
+[node name="menuPause" parent="Popups" instance=ExtResource("6_qwt1k")]
+visible = false
+
+[node name="MenuWin" parent="Popups" instance=ExtResource("7_faaan")]
+visible = false
+
+[connection signal="pressed" from="Gui/Pause" to="." method="_on_pause_pressed"]

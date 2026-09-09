@@ -1,0 +1,169 @@
+[gd_scene load_steps=8 format=3 uid="uid://bmfj5cjsdx5j7"]
+
+[ext_resource type="Script" uid="uid://blmtwiiyqfktk" path="res://Scripts/Levels/level_35.gd" id="1_nmjaj"]
+[ext_resource type="Texture2D" uid="uid://c3na6vat5pei1" path="res://Assets/Backgrounds/CloudsNight.png" id="2_0tntw"]
+[ext_resource type="Texture2D" uid="uid://brol0tbjmmumi" path="res://Assets/GUI/Pause_BTN.png" id="3_q5a7q"]
+[ext_resource type="PackedScene" uid="uid://bvvewa0u6xwfg" path="res://Scene/card.tscn" id="4_dsy0p"]
+[ext_resource type="PackedScene" uid="uid://do2ydhjw5vcl5" path="res://Menus/menu_lose.tscn" id="5_uwgto"]
+[ext_resource type="PackedScene" uid="uid://co3vcql8neymg" path="res://Menus/menu_pause.tscn" id="6_hvuey"]
+[ext_resource type="PackedScene" uid="uid://bymy1jx0pilmo" path="res://Menus/menu_win.tscn" id="7_6nree"]
+
+[node name="Level35" type="Node2D"]
+script = ExtResource("1_nmjaj")
+
+[node name="Background" type="TextureRect" parent="."]
+offset_right = 540.0
+offset_bottom = 959.0
+texture = ExtResource("2_0tntw")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="Gui" type="CanvasLayer" parent="."]
+
+[node name="Pause" type="TextureButton" parent="Gui"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -88.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = 88.0
+grow_horizontal = 0
+texture_normal = ExtResource("3_q5a7q")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Cards" type="Node2D" parent="."]
+
+[node name="Card" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 20.0
+offset_top = 256.0
+offset_right = 140.0
+offset_bottom = 416.0
+
+[node name="Card2" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 404.0
+offset_top = 256.0
+offset_right = 524.0
+offset_bottom = 416.0
+
+[node name="Card3" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 20.0
+offset_top = 592.0
+offset_right = 140.0
+offset_bottom = 752.0
+
+[node name="Card4" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 404.0
+offset_top = 592.0
+offset_right = 524.0
+offset_bottom = 752.0
+
+[node name="Card5" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 276.0
+offset_top = 592.0
+offset_right = 396.0
+offset_bottom = 752.0
+
+[node name="Card6" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 276.0
+offset_top = 256.0
+offset_right = 396.0
+offset_bottom = 416.0
+
+[node name="Card7" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 404.0
+offset_top = 760.0
+offset_right = 524.0
+offset_bottom = 920.0
+
+[node name="Card8" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 148.0
+offset_top = 760.0
+offset_right = 268.0
+offset_bottom = 920.0
+
+[node name="Card9" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 404.0
+offset_top = 88.0
+offset_right = 524.0
+offset_bottom = 248.0
+
+[node name="Card10" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 276.0
+offset_top = 88.0
+offset_right = 396.0
+offset_bottom = 248.0
+
+[node name="Card11" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 20.0
+offset_top = 760.0
+offset_right = 140.0
+offset_bottom = 920.0
+
+[node name="Card12" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 20.0
+offset_top = 88.0
+offset_right = 140.0
+offset_bottom = 248.0
+
+[node name="Card13" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 148.0
+offset_top = 256.0
+offset_right = 268.0
+offset_bottom = 416.0
+
+[node name="Card14" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 148.0
+offset_top = 88.0
+offset_right = 268.0
+offset_bottom = 248.0
+
+[node name="Card15" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 148.0
+offset_top = 592.0
+offset_right = 268.0
+offset_bottom = 752.0
+
+[node name="Card16" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 276.0
+offset_top = 760.0
+offset_right = 396.0
+offset_bottom = 920.0
+
+[node name="Card17" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 148.0
+offset_top = 424.0
+offset_right = 268.0
+offset_bottom = 584.0
+
+[node name="Card18" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 277.0
+offset_top = 424.0
+offset_right = 397.0
+offset_bottom = 584.0
+
+[node name="Card19" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 21.0
+offset_top = 424.0
+offset_right = 141.0
+offset_bottom = 584.0
+
+[node name="Card20" parent="Cards" instance=ExtResource("4_dsy0p")]
+offset_left = 405.0
+offset_top = 424.0
+offset_right = 525.0
+offset_bottom = 584.0
+
+[node name="Popups" type="CanvasLayer" parent="."]
+
+[node name="MenuLose" parent="Popups" instance=ExtResource("5_uwgto")]
+visible = false
+
+[node name="menuPause" parent="Popups" instance=ExtResource("6_hvuey")]
+visible = false
+
+[node name="MenuWin" parent="Popups" instance=ExtResource("7_6nree")]
+visible = false
+
+[connection signal="pressed" from="Gui/Pause" to="." method="_on_pause_pressed"]

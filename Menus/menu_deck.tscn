@@ -1,0 +1,353 @@
+[gd_scene load_steps=17 format=3 uid="uid://cwhlqps0o5u0r"]
+
+[ext_resource type="Texture2D" uid="uid://bdcj842sd0dqo" path="res://Assets/GUI/Window.png" id="1_d1sk3"]
+[ext_resource type="Script" uid="uid://c8bs7l8uucf32" path="res://Scripts/Menus/menu_deck.gd" id="1_g33bx"]
+[ext_resource type="Texture2D" uid="uid://dddksayvo60ij" path="res://Assets/GUI/Table_03.png" id="2_qcqi7"]
+[ext_resource type="Texture2D" uid="uid://d4aubqkegucau" path="res://Assets/GUI/Spades.png" id="3_mscps"]
+[ext_resource type="Texture2D" uid="uid://bo2kfl4ycowft" path="res://Assets/GUI/Hearts.png" id="4_84bui"]
+[ext_resource type="Texture2D" uid="uid://dkh3xtfl6ch1y" path="res://Assets/GUI/Clubs.png" id="5_8pngg"]
+[ext_resource type="Texture2D" uid="uid://ek2o51xphlrj" path="res://Assets/GUI/Diamonds.png" id="6_isr10"]
+[ext_resource type="Texture2D" uid="uid://jo76x34varkt" path="res://Assets/GUI/Forward_BTN.png" id="7_5ecmj"]
+[ext_resource type="Texture2D" uid="uid://b0rp0jluxi61k" path="res://Assets/GUI/Backward_BTN.png" id="8_2v13y"]
+[ext_resource type="Texture2D" uid="uid://7cc07j5oqfsk" path="res://Assets/GUI/Close_BTN.png" id="9_afel3"]
+[ext_resource type="Texture2D" uid="uid://ct7qbm6ftd7aa" path="res://Assets/GUI/Table_01.png" id="9_wd7m7"]
+[ext_resource type="Texture2D" uid="uid://dv3w4a5g5116o" path="res://Assets/GUI/Table_02.png" id="10_wmaiq"]
+[ext_resource type="Texture2D" uid="uid://bkn7jcrk2on1u" path="res://Assets/GUI/Shop_BTN.png" id="11_y8v04"]
+[ext_resource type="PackedScene" uid="uid://dfiyogo2q5d1b" path="res://Menus/deck_list.tscn" id="14_ywht8"]
+[ext_resource type="PackedScene" uid="uid://b66h16ifa3owm" path="res://Menus/deck_back.tscn" id="15_gxgpa"]
+[ext_resource type="PackedScene" uid="uid://cvr2wirp4vnwq" path="res://Menus/background_list.tscn" id="16_ticiq"]
+
+[node name="menuDeck" type="Popup"]
+transparent_bg = true
+size = Vector2i(540, 960)
+visible = true
+script = ExtResource("1_g33bx")
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="Window" type="TextureRect" parent="Background"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -399.0
+offset_right = 268.0
+offset_bottom = 399.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_d1sk3")
+expand_mode = 1
+
+[node name="Heading" type="Label" parent="Background/Window"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -236.0
+offset_top = 12.0
+offset_right = 242.0
+offset_bottom = 71.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Deck"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Buttons" type="CanvasLayer" parent="."]
+
+[node name="Spades" type="TextureButton" parent="Buttons"]
+offset_left = 48.0
+offset_top = 192.0
+offset_right = 112.0
+offset_bottom = 256.0
+texture_normal = ExtResource("2_qcqi7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sign" type="TextureRect" parent="Buttons/Spades"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 2.0
+offset_right = -6.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_mscps")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hearts" type="TextureButton" parent="Buttons"]
+offset_left = 176.0
+offset_top = 192.0
+offset_right = 240.0
+offset_bottom = 256.0
+texture_normal = ExtResource("2_qcqi7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sign" type="TextureRect" parent="Buttons/Hearts"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 2.0
+offset_right = -4.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_84bui")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Clubs" type="TextureButton" parent="Buttons"]
+offset_left = 304.0
+offset_top = 192.0
+offset_right = 368.0
+offset_bottom = 256.0
+texture_normal = ExtResource("2_qcqi7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sign" type="TextureRect" parent="Buttons/Clubs"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = 3.0
+offset_right = -4.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_8pngg")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Diamonds" type="TextureButton" parent="Buttons"]
+offset_left = 432.0
+offset_top = 192.0
+offset_right = 496.0
+offset_bottom = 256.0
+texture_normal = ExtResource("2_qcqi7")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Sign" type="TextureRect" parent="Buttons/Diamonds"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 3.0
+offset_right = -3.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_isr10")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Right" type="TextureButton" parent="Buttons"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -104.0
+offset_top = -40.0
+offset_right = -24.0
+offset_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("7_5ecmj")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Left" type="TextureButton" parent="Buttons"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 24.0
+offset_top = -40.0
+offset_right = 104.0
+offset_bottom = 40.0
+grow_vertical = 2
+texture_normal = ExtResource("8_2v13y")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Close" type="TextureButton" parent="Buttons"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -192.0
+offset_right = 104.0
+offset_bottom = -112.0
+grow_vertical = 0
+texture_normal = ExtResource("9_afel3")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Shop" type="TextureButton" parent="Buttons"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -104.0
+offset_top = -192.0
+offset_right = -24.0
+offset_bottom = -112.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("11_y8v04")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CardBack" type="TextureButton" parent="Buttons"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 22.0
+offset_top = -280.0
+offset_right = 234.0
+offset_bottom = -184.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("10_wmaiq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="CardBackLabel" type="Label" parent="Buttons/CardBack"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Card Backs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Backgrounds" type="TextureButton" parent="Buttons"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -234.0
+offset_top = -280.0
+offset_right = -22.0
+offset_bottom = -184.0
+grow_horizontal = 2
+grow_vertical = 0
+texture_normal = ExtResource("10_wmaiq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="BackgroundLabel" type="Label" parent="Buttons/Backgrounds"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 18
+text = "Backgrounds"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CardSelection" type="CanvasLayer" parent="."]
+
+[node name="CardFrame" type="TextureRect" parent="CardSelection"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -196.0
+offset_right = 150.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("9_wd7m7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cards" type="TextureRect" parent="CardSelection/CardFrame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = 23.0
+offset_right = -54.0
+offset_bottom = -118.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Change" type="TextureButton" parent="CardSelection/CardFrame"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -106.0
+offset_top = 96.0
+offset_right = 106.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("10_wmaiq")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="CardSelection/CardFrame/Change"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Change"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Popups" type="CanvasLayer" parent="."]
+
+[node name="DeckList" parent="Popups" instance=ExtResource("14_ywht8")]
+visible = false
+
+[node name="DeckBack" parent="Popups" instance=ExtResource("15_gxgpa")]
+visible = false
+
+[node name="BackgroundList" parent="Popups" instance=ExtResource("16_ticiq")]
+visible = false
+
+[connection signal="pressed" from="Buttons/Spades" to="." method="_on_spades_pressed"]
+[connection signal="pressed" from="Buttons/Hearts" to="." method="_on_hearts_pressed"]
+[connection signal="pressed" from="Buttons/Clubs" to="." method="_on_clubs_pressed"]
+[connection signal="pressed" from="Buttons/Diamonds" to="." method="_on_diamonds_pressed"]
+[connection signal="pressed" from="Buttons/Right" to="." method="_on_right_pressed"]
+[connection signal="pressed" from="Buttons/Left" to="." method="_on_left_pressed"]
+[connection signal="pressed" from="Buttons/Close" to="." method="_on_close_pressed"]
+[connection signal="pressed" from="Buttons/CardBack" to="." method="_on_card_back_pressed"]
+[connection signal="pressed" from="Buttons/Backgrounds" to="." method="_on_backgrounds_pressed"]
+[connection signal="pressed" from="CardSelection/CardFrame/Change" to="." method="_on_change_pressed"]

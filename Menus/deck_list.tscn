@@ -1,0 +1,173 @@
+[gd_scene load_steps=4 format=3 uid="uid://dfiyogo2q5d1b"]
+
+[ext_resource type="Script" uid="uid://douk4356lmqa2" path="res://Scripts/Menus/deck_list.gd" id="1_fidlj"]
+[ext_resource type="Texture2D" uid="uid://ct7qbm6ftd7aa" path="res://Assets/GUI/Table_01.png" id="1_imvw1"]
+[ext_resource type="Texture2D" uid="uid://dddksayvo60ij" path="res://Assets/GUI/Table_03.png" id="2_tbsdu"]
+
+[node name="DeckList" type="Popup"]
+transparent_bg = true
+size = Vector2i(540, 960)
+visible = true
+script = ExtResource("1_fidlj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 52.0
+offset_top = 64.0
+offset_right = -52.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_imvw1")
+expand_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 76.0
+offset_top = 88.0
+offset_right = -76.0
+offset_bottom = -104.0
+grow_horizontal = 2
+grow_vertical = 2
+follow_focus = true
+scroll_deadzone = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+size_flags_vertical = 4
+theme_override_constants/separation = 50
+
+[node name="ArtDeco" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_tbsdu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="ArtCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/ArtDeco"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Botany" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_tbsdu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="BotanyCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Botany"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cozy" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_tbsdu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CozyCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Cozy"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cyberpunk" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_tbsdu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CyberpunkCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Cyberpunk"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Haunted" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_tbsdu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="HauntedCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Haunted"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Notebook" type="TextureButton" parent="CanvasLayer/ScrollContainer/VBoxContainer"]
+custom_minimum_size = Vector2(250, 300)
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_tbsdu")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="NotebookCard" type="TextureRect" parent="CanvasLayer/ScrollContainer/VBoxContainer/Notebook"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.8, 0.8)
+pivot_offset = Vector2(125, 100)
+expand_mode = 1
+stretch_mode = 5
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/ArtDeco" to="." method="_on_art_deco_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Botany" to="." method="_on_botany_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Cozy" to="." method="_on_cozy_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Cyberpunk" to="." method="_on_cyberpunk_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Haunted" to="." method="_on_haunted_pressed"]
+[connection signal="pressed" from="CanvasLayer/ScrollContainer/VBoxContainer/Notebook" to="." method="_on_notebook_pressed"]

@@ -1,0 +1,112 @@
+[gd_scene load_steps=6 format=3 uid="uid://b8c8fi28lesl7"]
+
+[ext_resource type="Script" uid="uid://bsbqb3waiwlcy" path="res://Scripts/Menus/purchase_menu.gd" id="1_3mrbc"]
+[ext_resource type="Texture2D" uid="uid://bdcj842sd0dqo" path="res://Assets/GUI/Window.png" id="1_imfjr"]
+[ext_resource type="Texture2D" uid="uid://ct7qbm6ftd7aa" path="res://Assets/GUI/Table_01.png" id="2_wwh1e"]
+[ext_resource type="Texture2D" uid="uid://bxh4mei2gl185" path="res://Assets/GUI/Ok_BTN.png" id="3_xrtbc"]
+[ext_resource type="Texture2D" uid="uid://7cc07j5oqfsk" path="res://Assets/GUI/Close_BTN.png" id="4_6toso"]
+
+[node name="PurchaseMenu" type="Popup"]
+transparent_bg = true
+size = Vector2i(540, 960)
+visible = true
+script = ExtResource("1_3mrbc")
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="Window" type="TextureRect" parent="Background"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -328.0
+offset_right = 268.0
+offset_bottom = 328.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_imfjr")
+expand_mode = 1
+
+[node name="Heading" type="Label" parent="Background/Window"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -236.0
+offset_top = 12.0
+offset_right = 242.0
+offset_bottom = 71.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "Purchase"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PurchaseCard" type="CanvasLayer" parent="."]
+
+[node name="CardFrame" type="TextureRect" parent="PurchaseCard"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -184.0
+offset_right = 150.0
+offset_bottom = 120.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_wwh1e")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Cards" type="TextureRect" parent="PurchaseCard/CardFrame"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 54.0
+offset_top = 25.0
+offset_right = -54.0
+offset_bottom = -40.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Buttons" type="CanvasLayer" parent="."]
+
+[node name="Yes" type="TextureButton" parent="Buttons"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -112.0
+offset_top = -272.0
+offset_right = -32.0
+offset_bottom = -192.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3_xrtbc")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="No" type="TextureButton" parent="Buttons"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 32.0
+offset_top = -272.0
+offset_right = 112.0
+offset_bottom = -192.0
+grow_vertical = 0
+texture_normal = ExtResource("4_6toso")
+ignore_texture_size = true
+stretch_mode = 5
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
+[connection signal="pressed" from="Buttons/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Buttons/No" to="." method="_on_no_pressed"]

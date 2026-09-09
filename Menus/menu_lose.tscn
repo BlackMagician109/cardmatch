@@ -1,0 +1,166 @@
+[gd_scene load_steps=7 format=3 uid="uid://do2ydhjw5vcl5"]
+
+[ext_resource type="Texture2D" uid="uid://bdcj842sd0dqo" path="res://Assets/GUI/Window.png" id="1_0qpa8"]
+[ext_resource type="Script" uid="uid://cswvugmopqlma" path="res://Scripts/Menus/menu_lose.gd" id="1_07hov"]
+[ext_resource type="Texture2D" uid="uid://b8yea3nbtyv1k" path="res://Assets/GUI/Star_01.png" id="2_3e2ba"]
+[ext_resource type="Texture2D" uid="uid://dhtghwrns17te" path="res://Assets/GUI/Replay_BTN.png" id="3_ih7oi"]
+[ext_resource type="Texture2D" uid="uid://7cc07j5oqfsk" path="res://Assets/GUI/Close_BTN.png" id="4_1pgos"]
+[ext_resource type="Texture2D" uid="uid://dv3w4a5g5116o" path="res://Assets/GUI/Table_02.png" id="6_f37st"]
+
+[node name="MenuLose" type="Popup"]
+transparent_bg = true
+size = Vector2i(540, 960)
+visible = true
+script = ExtResource("1_07hov")
+
+[node name="Background" type="CanvasLayer" parent="."]
+
+[node name="Window" type="TextureRect" parent="Background"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -399.0
+offset_right = 268.0
+offset_bottom = 399.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_0qpa8")
+expand_mode = 1
+
+[node name="Heading" type="Label" parent="Background/Window"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -236.0
+offset_top = 12.0
+offset_right = 242.0
+offset_bottom = 71.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 40
+text = "You Lose"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stars" type="CanvasLayer" parent="."]
+
+[node name="Star1" type="TextureRect" parent="Stars"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -96.0
+offset_top = 216.0
+offset_right = 96.0
+offset_bottom = 408.0
+grow_horizontal = 2
+texture = ExtResource("2_3e2ba")
+expand_mode = 1
+
+[node name="Star2" type="TextureRect" parent="Stars"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 40.0
+offset_top = -112.0
+offset_right = 232.0
+offset_bottom = 80.0
+grow_vertical = 2
+texture = ExtResource("2_3e2ba")
+expand_mode = 1
+
+[node name="Star3" type="TextureRect" parent="Stars"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -232.0
+offset_top = -112.0
+offset_right = -40.0
+offset_bottom = 80.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("2_3e2ba")
+expand_mode = 1
+
+[node name="Buttons" type="CanvasLayer" parent="."]
+
+[node name="Restart" type="TextureButton" parent="Buttons"]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -192.0
+offset_right = -24.0
+offset_bottom = -112.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("3_ih7oi")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Exit" type="TextureButton" parent="Buttons"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 24.0
+offset_top = -192.0
+offset_right = 104.0
+offset_bottom = -112.0
+grow_vertical = 0
+texture_normal = ExtResource("4_1pgos")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Coins" type="CanvasLayer" parent="."]
+
+[node name="CoinsNum" type="TextureRect" parent="Coins"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -264.0
+offset_top = 160.0
+offset_right = -56.0
+offset_bottom = 224.0
+grow_horizontal = 0
+grow_vertical = 2
+texture = ExtResource("6_f37st")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Label" type="Label" parent="Coins/CoinsNum"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CoinLabel" type="Label" parent="Coins"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 64.0
+offset_top = 173.5
+offset_right = 190.0
+offset_bottom = 210.5
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Coins"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="about_to_popup" from="." to="." method="_on_about_to_popup"]
+[connection signal="pressed" from="Buttons/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Buttons/Exit" to="." method="_on_exit_pressed"]
